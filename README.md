@@ -32,3 +32,6 @@ $ npm run test
 - A customer is matched to a sales manager when the language, rating and products of input parameter intersect with the ones a sales
 manager has.
 ```
+
+<img width="657" alt="Screenshot 2024-10-27 at 14 07 20" src="https://github.com/user-attachments/assets/47bb5c64-a440-44b8-98f6-7c8138c8203e">
+
