@@ -4,23 +4,23 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+## Installation & start instructions
 
 ```bash
+# install the dependencies
 $ npm install
+# start the service via docker compose with the DB
+$ start:docker
 ```
 
-## Running the app
-
+## Run the tests
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+# unit tests
+$ cd resources/tests
+# install test dependencies
+$ npm install
+# run provided tests
+$ npm run test
 ```
 
 
@@ -31,17 +31,4 @@ $ npm run start:prod
 - A slot can be booked or not. Available slots that conflict with other booked slots should not be counted.
 - A customer is matched to a sales manager when the language, rating and products of input parameter intersect with the ones a sales
 manager has.
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
