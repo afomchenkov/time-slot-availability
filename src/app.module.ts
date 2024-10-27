@@ -2,15 +2,16 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ScheduleModule } from '@nestjs/schedule';
 import { TypeOrmModule } from '@nestjs/typeorm';
-
+import { TerminusModule } from '@nestjs/terminus';
 import { AppController } from './app.controller';
-import { AppService } from './services/app.service';
+import { AppService, HealthService, PingIndicatorService } from './services';
 import { SettingModule } from './settings/settings.module';
 import { SettingService } from './settings/settings.service';
 import { DBModule } from './settings/db.module';
 
 @Module({
   imports: [
+    TerminusModule,
     ScheduleModule.forRoot(),
     ConfigModule.forRoot(),
     DBModule,
@@ -23,6 +24,6 @@ import { DBModule } from './settings/db.module';
     }),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, PingIndicatorService, HealthService],
 })
 export class AppModule {}

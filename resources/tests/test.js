@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const { default: axios } = require('axios');
 
 jest.setTimeout(600000);

@@ -5,7 +5,6 @@ import {
   LessThanOrEqual,
   MoreThanOrEqual,
   ArrayContains,
-  ArrayOverlap,
 } from 'typeorm';
 import { Slot } from '../entities';
 
@@ -49,11 +48,10 @@ export class SlotService {
         salesManager: {
           languages: ArrayContains([language]),
           customerRatings: ArrayContains([rating]),
-          // if at least one product from 'payload.products' is met
-          products: ArrayOverlap([...products]),
+          products: ArrayContains([...products]),
         },
       },
-      // cache query
+      // cache the query
       cache: true,
     });
   }
